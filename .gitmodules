@@ -7,3 +7,6 @@
 [submodule "submodules/vim-rtags"]
 	path = submodules/vim-rtags
 	url = https://github.com/lyuts/vim-rtags.git
+[submodule "submodules/tmux-themepack"]
+	path = submodules/tmux-themepack
+	url = https://github.com/jimeh/tmux-themepack.git
