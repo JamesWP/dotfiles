@@ -4,12 +4,12 @@
 [submodule "submodules/ctrlp.vim"]
 	path = submodules/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
-[submodule "submodules/vim-rtags"]
-	path = submodules/vim-rtags
-	url = https://github.com/lyuts/vim-rtags.git
 [submodule "submodules/tmux-themepack"]
 	path = submodules/tmux-themepack
 	url = https://github.com/jimeh/tmux-themepack.git
 [submodule "submodules/molokai.git"]
 	path = submodules/molokai.git
 	url = https://github.com/tomasr/molokai.git
+[submodule "submodules/YouCompleteMe"]
+	path = submodules/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
