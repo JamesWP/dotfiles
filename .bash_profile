@@ -11,7 +11,7 @@ if [[ -f /usr/bin/clang++-5.0 ]] ; then
 fi
 
 alias gs='git status'
-alias ll='ls -la'
+alias ll='ls -la --color=auto'
 
 function rw {
   tmux rename-window "$*"

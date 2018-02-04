@@ -4,10 +4,15 @@ syntax on
 set background=dark
 colorscheme molokai
 let mapleader="§"
-set mouse=a
 set visualbell
 set noerrorbells
 set ttyfast
+
+set mouse=a
+if &term =~ '^screen'
+    " tmux knows the extended mouse mode
+    set ttymouse=xterm2
+endif
 
 " tab and pane controls
 nnoremap <leader>q :tabprevious<cr>
@@ -24,6 +29,10 @@ set tabstop=2
 " split line
 nnoremap K i<cr><esc>
 
+" fix indent outdent with selection
+vnoremap < <gv
+vnoremap > >gv
+
 set encoding=utf-8
 set fileencoding=utf-8
 
@@ -33,4 +42,8 @@ let g:ycm_auto_trigger = 0
 " to disable preview: set completeopt-=preview
 
 " clang format config
-map <C-I> :pyf /usr/share/clang/clang-format.py<cr>
+if has('python')
+  map <C-I> :pyf /usr/share/clang/clang-format.py<cr>
+elseif has('python3')
+  map <C-I> :py3f /usr/share/clang/clang-format.py<cr>
+endif
