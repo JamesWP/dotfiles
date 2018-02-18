@@ -8,6 +8,10 @@ set visualbell
 set noerrorbells
 set ttyfast
 
+set expandtab
+set tabstop=2
+set shiftwidth=2
+
 set mouse=a
 if &term =~ '^screen'
     " tmux knows the extended mouse mode
@@ -47,3 +51,6 @@ if has('python')
 elseif has('python3')
   map <C-I> :py3f /usr/share/clang/clang-format.py<cr>
 endif
+
+" ycm config
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
