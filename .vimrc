@@ -11,7 +11,7 @@ set ttyfast
 set expandtab
 set tabstop=2
 set shiftwidth=2
-
+set complete-=i
 set mouse=a
 if &term =~ '^screen'
     " tmux knows the extended mouse mode
@@ -47,9 +47,9 @@ let g:ycm_auto_trigger = 0
 
 " clang format config
 if has('python')
-  map <C-I> :pyf /usr/share/clang/clang-format.py<cr>
+  map <C-I> :pyf /usr/share/clang/clang-format-3.8/clang-format.py<cr>
 elseif has('python3')
-  map <C-I> :py3f /usr/share/clang/clang-format.py<cr>
+  map <C-I> :py3f /usr/share/clang/clang-format-3.8/clang-format.py<cr>
 endif
 
 " ycm config
