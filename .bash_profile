@@ -27,6 +27,11 @@ fi
 alias gs='git status'
 alias ll='ls -la --color=auto'
 
+export HISTSIZE=-1
+export HISTFILESIZE=-1
+export HISTFILE=~/.bash_eternal_history
+export HISTTIMEFORMAT="[%F %T] "
+PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 #if ! [[ -f /usr/share/clang/clang-format.py ]] && [[ -f /usr/share/clang/clang-format-3.8/clang-format.py ]] then
 #  echo ln -s -r /usr/share/clang/clang-format-3.8/clang-format.py /usr/share/clang/clang-format.py
