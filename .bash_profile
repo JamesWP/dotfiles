@@ -43,6 +43,14 @@ function rw {
 export DOCKER_HOST=tcp://0.0.0.0:2375
 alias dev_proxy='http_proxy=http://bproxy.tdmz1.bloomberg.com:80 https_proxy=http://bproxy.tdmz1.bloomberg.com:80'
 alias ext_proxy='http_proxy=http://proxy.bloomberg.com:77 https_proxy=http://proxy.bloomberg.com:77'
-export PATH="~/bin:$PATH:/opt/bb/bin"
+export PATH="~/bin:$PATH:/opt/bb/bin:/bb/bin"
 
+export PKG_CONFIG_PATH="/usr/local/lib64/pkgconfig/"
 
+#pgrep -x "cdb2sockpool" 2>&1 1>/dev/null || ( echo starting cdb2sockpool; cdb2sockpool )
+
+alias stripws="sed 's/\ \+$//g' -i"
+export DISPLAY=":0"
+
+alias mk="make 2>&1 | tee mkerr"
+export LESS="-R"

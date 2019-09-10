@@ -78,3 +78,4 @@ let g:clangd#clangd_executable = '/home/jpeach6/gits/llvm-git/bld/bin/clangd'
 " bde format
 let g:bde_format_path='/opt/bb/bin/bde-format'
 
+autocmd FileType h,c,cpp,java,php autocmd BufWritePre <buffer> %s/\s\+$//e
